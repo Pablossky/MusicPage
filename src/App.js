@@ -62,6 +62,12 @@ const MusicSharingPage = () => {
       cover: '/images/fall.png',
     },
     {
+      title: 'Freefall',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsHumanFall/Freefall.mp3',
+      cover: '/images/fall.png',
+    },
+    {
       title: 'Rubberhose',
       artist: 'Paweł Mendzik',
       src: '/songs/songsHumanFall/rubberhose.mp3',
@@ -71,6 +77,12 @@ const MusicSharingPage = () => {
       title: 'Better of Us',
       artist: 'Paweł Mendzik',
       src: '/songs/songsHumanFall/BetterOfUs.mp3',
+      cover: '/images/lofi.png',
+    },
+    {
+      title: 'Scattered Ice',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsHumanFall/ScatteredIce.mp3',
       cover: '/images/lofi.png',
     },
     {
@@ -92,6 +104,12 @@ const MusicSharingPage = () => {
       title: 'Digital Dance Maestro',
       artist: 'Paweł Mendzik',
       src: '/songs/songsMaestro/DigitalDanceMaestro.mp3',
+      cover: '/images/maestro.png',
+    },
+    {
+      title: 'Darker Disco Despair',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsMaestro/DarkerDiscoDespair.mp3',
       cover: '/images/maestro.png',
     },
     {
@@ -118,6 +136,12 @@ const MusicSharingPage = () => {
       src: '/songs/songsMaestro/FunkyFuturisticFrenzy.mp3',
       cover: '/images/maestro.png',
     },
+    {
+      title: 'Neon Nightmare Nights',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsMaestro/NeonNightmareNights.mp3',
+      cover: '/images/maestro.png',
+    },
   ];
 
   const songsOrchestral = [
@@ -134,6 +158,27 @@ const MusicSharingPage = () => {
       cover: '/images/orchestral.png',
     },
   ];
+
+  const songsSingles = [
+    {
+      title: 'Golden',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsSingles/Golden.mp3',
+      cover: '/images/bigbrain.jpg',
+    },
+    {
+      title: 'Orient',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsSingles/Orient.mp3',
+      cover: '/images/bigbrain.jpg',
+    },
+    {
+      title: 'Lavender',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsSingles/Lavender.mp3',
+      cover: '/images/bigbrain.jpg',
+    },
+  ]
 
   return (
     <div className="container mt-5">
@@ -173,6 +218,10 @@ const MusicSharingPage = () => {
 
           <div className="playlist-dropdown">
             <SongList title="Orchestral" songs={songsOrchestral} onPlay={(song) => handlePlay(song, songsOrchestral)} />
+          </div>
+
+          <div className="playlist-dropdown">
+            <SongList title="Singles" songs={songsSingles} onPlay={(song) => handlePlay(song, songsSingles)} />
           </div>
         </div>
       </div>

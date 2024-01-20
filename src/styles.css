@@ -39,6 +39,7 @@ body {
 .jumbotron {
   padding-top: 20px; /* Add padding to the jumbotron */
   border-radius: 15px; /* Add border-radius for round corners */
+  border: 2px solid white; /* Add white border with 2px thickness */
 }
 
 .col-lg-6 {
@@ -47,6 +48,7 @@ body {
 
 .music-player-container {
   padding: 20px; /* Add padding to the music player container */
+  border: 2px solid white; /* Add white border with 2px thickness */
 }
 
 .audio-controls {
@@ -66,10 +68,21 @@ body {
 }
 
   
-.h1 {
+h1 {
   font-family: 'Press Start 2P', sans-serif;
   font-size: 24px; /* Adjust the font size as needed */
   margin-top: 0;
   color: #b801be; /* Yellow text color */
   padding-bottom: 20px;
+}
+
+h3 {
+  font-family: 'Press Start 2P';
+  font-size: 40px !important; 
+}
+
+.bg-dark {
+  font-family: 'Press Start 2P';
+  color: #b801be !important; /* Yellow text color */
+  font-size: 18px !important; 
 }
