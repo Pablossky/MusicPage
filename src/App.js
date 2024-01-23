@@ -1,7 +1,9 @@
 // MusicSharingPage.js
 import React, { useState } from 'react';
+import { Dropdown } from 'react-bootstrap';
 import MusicPlayer from './components/MusicPlayer';
 import SongList from './components/SongList';
+import InfoDropdown from './components/InfoDropdown';
 
 import './styles.css';
 
@@ -180,6 +182,13 @@ const MusicSharingPage = () => {
     },
   ]
 
+  //-----------------------------------------
+
+  const infoDropdownItems = [
+    { title: 'Contact:', content: ['E-mail: pxblxsskx@gmail.com', 'Discord: pablossky'] },
+    { title: 'About:', content: 'Basement goblin making music' },
+  ];
+
   return (
     <div className="container mt-5">
       <div className="jumbotron bg-dark text-white">
@@ -223,6 +232,9 @@ const MusicSharingPage = () => {
           <div className="playlist-dropdown">
             <SongList title="Singles" songs={songsSingles} onPlay={(song) => handlePlay(song, songsSingles)} />
           </div>
+
+          <h3 className="display-4">Info:</h3>
+          <InfoDropdown title="About" items={infoDropdownItems} />
         </div>
       </div>
     </div>

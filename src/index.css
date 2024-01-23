@@ -15,11 +15,10 @@ code {
     monospace;
 }
 
-
 h1 {
   font-family: "Press Start 2P";
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 24px;
   margin: 0;
-  color: #b801be; /* Yellow text color */
+  color: #b801be;
   padding-bottom: 20px;
 }
