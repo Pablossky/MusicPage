@@ -29,7 +29,7 @@ const MusicPlayer = ({ src, title, autoplay, cover }) => {
     <div className="music-player-container">
       <div className="audio-controls">
         <div className="player-info">
-          <h4 style={{ fontFamily: 'Press Start 2P' }}>{title}</h4>
+          <h4>{title}</h4>
           {cover && <img src={cover} alt={`${title} Cover`} className="album-cover" />}
         </div>
         <AudioPlayer

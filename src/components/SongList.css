@@ -1,0 +1,53 @@
+@keyframes pixelAnimationOrange {
+    0% {
+      filter: url('#pixelate');
+      transform: scale(1);
+    }
+    50% {
+      filter: url('#pixelate');
+      transform: scale(1.2);
+    }
+    100% {
+      filter: url('#pixelate');
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes pixelAnimationViolet {
+    0% {
+      filter: url('#pixelate');
+      transform: scale(1);
+    }
+    50% {
+      filter: url('#pixelate');
+      transform: scale(1.2);
+    }
+    100% {
+      filter: url('#pixelate');
+      transform: scale(1);
+    }
+  }
+  
+  .play-button {
+    background-color: #b801be;
+    color: #FFFFFF;
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+  
+  .play-button.playing {
+    color: black;
+    background-color: #b801be;
+  }
+  
+  .pixelate-orange {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><filter id="pixelate" x="0" y="0" width="100%" height="100%"><feFlood result="color" x="0" y="0" width="100%" height="100%" flood-color="#FFA500"/><feTile in="color" result="tile"/><feDisplacementMap in="tile" in2="pixelate" scale="10" xChannelSelector="R" yChannelSelector="G"/></filter></svg>');
+    filter: url('#pixelate');
+    animation: pixelAnimationOrange 2s ease infinite;
+  }
+  
+  .pixelate-violet {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100"><filter id="pixelate" x="0" y="0" width="100%" height="100%"><feFlood result="color" x="0" y="0" width="100%" height="100%" flood-color="#00CED1"/><feTile in="color" result="tile"/><feDisplacementMap in="tile" in2="pixelate" scale="10" xChannelSelector="R" yChannelSelector="G"/></filter></svg>');
+    filter: url('#pixelate');
+    animation: pixelAnimationViolet 2s ease infinite;
+  }
+  
