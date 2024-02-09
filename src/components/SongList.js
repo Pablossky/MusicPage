@@ -22,7 +22,6 @@ const SongList = ({ title, songs, onPlay }) => {
   };
 
   useEffect(() => {
-    // Reset animations when playingIndex changes
     if (playingIndex !== null) {
       const orangeTimeout = setTimeout(() => setAnimateOrange(false), 2000);
       const violetTimeout = setTimeout(() => setAnimateViolet(false), 2000);
@@ -54,53 +53,47 @@ const SongList = ({ title, songs, onPlay }) => {
       <Collapse in={isCollapsed}>
         <Card.Body className="bg-dark">
           <ListGroup variant="flush">
-          {songs.map((song, index) => (
-  // Conditionally render OverlayTrigger only when there is hoverText
-  song.hoverInfo ? (
-    <OverlayTrigger
-      key={index}
-      placement="top"
-      overlay={renderHoverPopup(song.hoverInfo)}
-    >
-      <ListGroup.Item
-        key={index}
-        className="d-flex justify-content-between align-items-center bg-dark text-white"
-      >
-        <span>{song.title}</span>
-        <Button
-          variant="warning"
-          onClick={() => handlePlay(song, index)}
-          className={`play-button ${
-            playingIndex === index ? 'playing' : ''
-          } ${animateOrange && playingIndex === index ? 'pixelate-orange' : ''} ${
-            animateViolet && playingIndex === index ? 'pixelate-violet' : ''
-          }`}
-        >
-          Play
-        </Button>
-      </ListGroup.Item>
-    </OverlayTrigger>
-  ) : (
-    // Render without OverlayTrigger for songs without hoverText
-    <ListGroup.Item
-      key={index}
-      className="d-flex justify-content-between align-items-center bg-dark text-white"
-    >
-      <span>{song.title}</span>
-      <Button
-        variant="warning"
-        onClick={() => handlePlay(song, index)}
-        className={`play-button ${
-          playingIndex === index ? 'playing' : ''
-        } ${animateOrange && playingIndex === index ? 'pixelate-orange' : ''} ${
-          animateViolet && playingIndex === index ? 'pixelate-violet' : ''
-        }`}
-      >
-        Play
-      </Button>
-    </ListGroup.Item>
-  )
-))}
+            {songs.map((song, index) => (
+              song.hoverInfo ? (
+                <OverlayTrigger
+                  key={index}
+                  placement="top"
+                  overlay={renderHoverPopup(song.hoverInfo)}
+                >
+                  <ListGroup.Item
+                    key={index}
+                    className="d-flex justify-content-between align-items-center bg-dark text-white"
+                  >
+                    <span>{song.title}</span>
+                    <Button
+                      variant="warning"
+                      onClick={() => handlePlay(song, index)}
+                      className={`play-button ${playingIndex === index ? 'playing' : ''
+                        } ${animateOrange && playingIndex === index ? 'pixelate-orange' : ''} ${animateViolet && playingIndex === index ? 'pixelate-violet' : ''
+                        }`}
+                    >
+                      Play
+                    </Button>
+                  </ListGroup.Item>
+                </OverlayTrigger>
+              ) : (
+                <ListGroup.Item
+                  key={index}
+                  className="d-flex justify-content-between align-items-center bg-dark text-white"
+                >
+                  <span>{song.title}</span>
+                  <Button
+                    variant="warning"
+                    onClick={() => handlePlay(song, index)}
+                    className={`play-button ${playingIndex === index ? 'playing' : ''
+                      } ${animateOrange && playingIndex === index ? 'pixelate-orange' : ''} ${animateViolet && playingIndex === index ? 'pixelate-violet' : ''
+                      }`}
+                  >
+                    Play
+                  </Button>
+                </ListGroup.Item>
+              )
+            ))}
 
           </ListGroup>
         </Card.Body>

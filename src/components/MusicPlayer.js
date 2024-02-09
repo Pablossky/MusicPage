@@ -1,10 +1,11 @@
 // MusicPlayer.js
 import React, { useEffect, useRef } from 'react';
 import 'react-h5-audio-player/lib/styles.css';
-import './MusicPlayer.css'; // Import the custom styling
 import AudioPlayer from 'react-h5-audio-player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faPause, faVolumeUp } from '@fortawesome/free-solid-svg-icons';
+
+import './MusicPlayer.css';
 
 const MusicPlayer = ({ src, title, autoplay, cover }) => {
   const audioPlayer = useRef(null);
@@ -22,7 +23,6 @@ const MusicPlayer = ({ src, title, autoplay, cover }) => {
   }, [autoplay]);
 
   const handleSongEnd = () => {
-    // To do autoplay
   };
 
   return (

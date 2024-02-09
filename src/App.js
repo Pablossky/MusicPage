@@ -108,6 +108,12 @@ const MusicSharingPage = () => {
       src: '/songs/songsHumanFall/TidesOfJoy.mp3',
       cover: '/images/lofi.png',
     },
+    {
+      title: 'Seas',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsHumanFall/Seas.mp3',
+      cover: '/images/lofi.png',
+    },
   ];
 
   const songsMaestro = [

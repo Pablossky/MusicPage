@@ -1,7 +1,7 @@
 /* MusicPlayer.css */
 
 .music-player-container {
-    background-color: #212529; /* Dark background color */
+    background-color: #212529;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -36,7 +36,6 @@
     height: auto;
   }
 
-/* PLAYER */
 .rhap_play-pause-button,
 .rhap_volume-button {
   font-size: 24px;
