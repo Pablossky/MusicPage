@@ -1,7 +1,5 @@
 # Music Sharing Page
 
-![Music Sharing Page Preview]
-
 This is a web application for listening to music. Users can explore various albums, play songs, and learn about the artist. The application features a user-friendly interface and smooth playback experience.
 
 ## Features
