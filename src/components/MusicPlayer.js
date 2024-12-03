@@ -10,18 +10,22 @@ const MusicPlayer = ({ src, title, autoplay, cover }) => {
   const audioPlayer = useRef(null);
 
   useEffect(() => {
-    if (autoplay && audioPlayer.current) {
-      audioPlayer.current.audio.current.addEventListener('ended', handleSongEnd);
+    const audioNode = audioPlayer.current?.audio.current; // Przechowaj ref w zmiennej lokalnej
+
+    if (autoplay && audioNode) {
+      audioNode.addEventListener('ended', handleSongEnd);
     }
 
     return () => {
-      if (audioPlayer.current) {
-        audioPlayer.current.audio.current.removeEventListener('ended', handleSongEnd);
+      if (audioNode) {
+        audioNode.removeEventListener('ended', handleSongEnd);
       }
     };
   }, [autoplay]);
 
   const handleSongEnd = () => {
+    console.log('Song has ended');
+    // Twoja logika po zakończeniu utworu
   };
 
   return (

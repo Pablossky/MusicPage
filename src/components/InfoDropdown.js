@@ -1,5 +1,5 @@
 import React from 'react';
-import { Collapse, Card, Button } from 'react-bootstrap';
+import { Collapse, Card } from 'react-bootstrap';
 
 const InfoDropdown = ({ title, items }) => {
   const [isCollapsed, setCollapsed] = React.useState(false);

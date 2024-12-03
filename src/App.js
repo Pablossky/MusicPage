@@ -9,15 +9,11 @@ import './styles.css';
 
 const MusicSharingPage = () => {
   const [currentSong, setCurrentSong] = useState(null);
-  const [openDropdown, setOpenDropdown] = useState(null);
 
   const handlePlay = (song) => {
     setCurrentSong(song);
   };
 
-  const toggleDropdown = (playlist) => {
-    setOpenDropdown(openDropdown === playlist ? null : playlist);
-  };
 
   const songsFlowers = [
     {
