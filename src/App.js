@@ -222,6 +222,7 @@ const MusicSharingPage = () => {
       artist: 'Paweł Mendzik',
       src: '/songs/songsSingles/Lavender.mp3',
       cover: '/images/bigbrain.jpg',
+      hoverInfo: 'Pokemon Lavender Town inspired',
     },
     {
       title: 'Addiction',
