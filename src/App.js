@@ -36,6 +36,13 @@ const MusicSharingPage = () => {
       cover: '/images/yozo.png',
     },
     {
+      title: 'Dendrobium',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsFlowers/26.mp3',
+      cover: '/images/yozo.png',
+      hoverInfo: 'Weird one...',
+    },
+    {
       title: 'Queen of the Night',
       artist: 'Paweł Mendzik',
       src: '/songs/songsFlowers/Queen_of_the_Night.mp3',
@@ -64,6 +71,12 @@ const MusicSharingPage = () => {
       title: 'Ode to Insomnia',
       artist: 'Paweł Mendzik',
       src: '/songs/songsHumanFall/Insomnia.mp3',
+      cover: '/images/fall.png',
+    },
+    {
+      title: 'Misery',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsHumanFall/misery.mp3',
       cover: '/images/fall.png',
     },
     {
@@ -111,6 +124,23 @@ const MusicSharingPage = () => {
       cover: '/images/lofi.png',
     },
   ];
+
+  const songsIchi = [
+    {
+      title: 'Ichi',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsIchi/Ichi.mp3',
+      cover: '/images/electro.png',
+      hoverInfo: 'Ive lost the project file for this track, so I cant export tracks from it anymore',
+    },
+    {
+      title: 'Repancy',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsIchi/EP2_Repancy.mp3',
+      cover: '/images/electro.png',
+      
+    }
+  ]
 
   const songsMaestro = [
     {
@@ -238,6 +268,10 @@ const MusicSharingPage = () => {
 
           <div className="playlist-dropdown">
             <SongList title="Human Fall" songs={songsHumanFall} onPlay={(song) => handlePlay(song, songsHumanFall)} />
+          </div>
+
+          <div className="playlist-dropdown">
+            <SongList title="Ichi" songs={songsIchi} onPlay={(song) => handlePlay(song, songsIchi)} />
           </div>
 
           <div className="playlist-dropdown">
