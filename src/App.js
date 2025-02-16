@@ -127,9 +127,16 @@ const MusicSharingPage = () => {
 
   const songsIchi = [
     {
-      title: 'Ichi',
+      title: 'Ichi pt.1',
       artist: 'Paweł Mendzik',
-      src: '/songs/songsIchi/Ichi.mp3',
+      src: '/songs/songsIchi/ichipt1.mp3',
+      cover: '/images/electro.png',
+      hoverInfo: 'Ive lost the project file for this track, so I cant export tracks from it anymore',
+    },
+    {
+      title: 'Ichi pt.2',
+      artist: 'Paweł Mendzik',
+      src: '/songs/songsIchi/ichipt2.mp3',
       cover: '/images/electro.png',
       hoverInfo: 'Ive lost the project file for this track, so I cant export tracks from it anymore',
     },
